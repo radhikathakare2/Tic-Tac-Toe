@@ -3,23 +3,35 @@
     padding: 0;
 }
 body{
-    background-color: #221D23;
+    background-color: #1e1a1d;
     text-align: center;
 }
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 h1{
-    color: #D1603D;
+    color: #ffc368;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 .container{
-    height: 70vh;
+    height: 60vmin;
+    width: 60vmin;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .game{
-    height: 60vmin;
-    width: 60vmin;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -27,27 +39,17 @@ h1{
     gap: 1.5vmin;
 }
 .box{
-    height: 18vmin;
-    width: 18vmin;
+    height: 17vh;
+    width: 17vh;
     border-radius: 0.2rem;
     border: none;
     font-size: 10vmin;
-    color:#4F3824 ;
-    background-color: #D0E37F;
-}
-#reset{
-padding: 1rem;
-font-size: 1rem ;
-background-color: #DDB967;
-color: #070e3b;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-weight: 700;
-border-radius: 0.6rem;
-border: none;
+    color:#E5F2C9 ;
+    background-color: #aed99e;
 }
 #new-game{
-    padding: 1rem;
-font-size: 1rem ;
+padding: 1rem;
+font-size: 1.4rem ;
 background-color: #DDB967;
 color: #070e3b;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -58,13 +60,20 @@ border: none;
 
 #msg{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #DDB967;
+    color: #ff914d;
     font-weight: 500;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
 }
 .msg-container{
     height: 7vmin;
-    margin-top: 1rem;
+    width: 87vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#msg{
+    line-height: 7vmin;
+    vertical-align: center;
 }
 .hide{
     display: none;
@@ -72,7 +81,33 @@ border: none;
 
 .o{
     color: #070e3b;
+    font-size: 3.7rem;
 }
 .x{
     color: red;
+    font-size: 3.7rem;
+}
+
+@media(max-width:595px){
+    .container{
+        height: 50vh;
+        width: 50vh;
+    }
+    .game{
+        height: 100%;
+        width: 100%;
+    }
+    .box{
+        height: 14vh;
+        width: 14vh;
+    }
+    h1{
+        font-size: 3.5rem;
+    }
+    .o, .x {
+        font-size: 3rem;
+    }
+    #msg{
+        font-size: 1.3rem;
+    }
 }
